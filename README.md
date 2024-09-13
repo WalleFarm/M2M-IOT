@@ -14,3 +14,5 @@
 物联网实战--平台篇https://blog.csdn.net/ypp240124016/category_12653350.html
 
 端点物联开发教程 https://blog.csdn.net/ypp240124016/category_12696766.html
+
+演示视频 https://blog.csdn.net/ypp240124016/article/details/139627124
