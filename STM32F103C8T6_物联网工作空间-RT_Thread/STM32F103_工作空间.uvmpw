@@ -9,12 +9,11 @@
 
   <project>
     <PathAndName>.\Project\Project-净化器(M2M)\Project-净化器(M2M).uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>.\Project\Project-演示温湿度计\Project-演示温湿度计.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
   </project>
 
 </ProjectWorkspace>
