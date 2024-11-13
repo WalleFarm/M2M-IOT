@@ -26,7 +26,7 @@ Rectangle
         anchors.margins: 2
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        font.pointSize: height*0.35
+        font.pointSize: height*0.4
         font.family:buttonFontFamily
         color: buttonColor
         text:buttonText

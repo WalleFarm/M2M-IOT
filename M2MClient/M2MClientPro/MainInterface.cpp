@@ -49,6 +49,7 @@ MainInterface::MainInterface(QObject *parent) : QObject(parent)
     QThread *tmp_thread = new QThread();
     m_decodeThread->moveToThread(tmp_thread);
     tmp_thread->start();
+
     
 }
 

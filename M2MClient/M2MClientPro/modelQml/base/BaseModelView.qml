@@ -9,13 +9,17 @@ Rectangle
     property var devNameColor: "black"
     property var devSnColor: "#808080"
     property var devStateColor: "#808080"
-
-    anchors.fill: parent
+    property var headHeight: 50
+    property var fillFlag: 1
+    
+    id:id_rootRect
+    
+//    anchors.fill: fillFlag>0 ? parent : null
     Rectangle
     {
         id:id_headRect
         width: parent.width
-        height: 50
+        height: headHeight
         color: headColor
         anchors
         {
@@ -77,6 +81,12 @@ Rectangle
             text: "离线"
     }
 
+    }
+    
+    Component.onCompleted: 
+    {
+        if(fillFlag>0)
+            id_rootRect.anchors.fill=parent
     }
     function funSetDevState(dev_state)
     {

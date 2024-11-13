@@ -68,7 +68,7 @@ public:
     void udpDebug(QString msg_str);
     QJsonObject readConfg(QString path, u8 *key_buff=nullptr);
     int writeConfig(QString path, QJsonObject root_obj, u8 *key_buff=nullptr);
-    QString takeUUID(void);;
+    QString takeUUID(void);
 };
 
 #endif // DRVCOMMON_H

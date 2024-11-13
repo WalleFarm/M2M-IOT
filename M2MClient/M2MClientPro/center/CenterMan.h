@@ -8,6 +8,7 @@
 
 #include "modelCpp/ModelAp01.h"
 #include "modelCpp/ModelTh01.h"
+#include "modelCpp/ModelGw01.h"
 
 class CenterMan : public QObject
 {
@@ -17,7 +18,7 @@ public:
     {
         MODEL_TYPE_AP01=0xA101,//空气净化器
         MODEL_TYPE_TH01=0xA108,//温湿度计(演示)
-        
+        MODEL_TYPE_GW01=0xC101,//LoRaSun测试网关
     };
     typedef enum
     {

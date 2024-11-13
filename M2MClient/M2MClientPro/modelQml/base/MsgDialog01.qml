@@ -9,7 +9,7 @@ Popup {
     implicitWidth: 200
     implicitHeight: 50 
     modal: true
-    focus: true
+    focus: true  
     closePolicy: Popup.CloseOnEscape | Popup.CloseOnReleaseOutside
     anchors.centerIn: Overlay.overlay
     enter: Transition {

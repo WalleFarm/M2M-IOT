@@ -34,6 +34,7 @@ SOURCES += \
         main.cpp \
         modelCpp/BaseModel.cpp \
         modelCpp/ModelAp01.cpp \
+        modelCpp/ModelGw01.cpp \
         modelCpp/ModelTh01.cpp \
         mqtt/BaseMqtt.cpp \
         mqtt/qmqtt_client.cpp \
@@ -74,6 +75,7 @@ HEADERS += \
     drivers/encrypt/mbedtls/aes.h \
     modelCpp/BaseModel.h \
     modelCpp/ModelAp01.h \
+    modelCpp/ModelGw01.h \
     modelCpp/ModelTh01.h \
     mqtt/BaseMqtt.h \
     mqtt/qmqtt.h \

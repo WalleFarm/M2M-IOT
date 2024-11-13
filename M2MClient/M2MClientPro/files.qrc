@@ -49,6 +49,8 @@
         <file>modelImages/off02.png</file>
         <file>modelImages/on02.png</file>
         <file>modelImages/TH01.png</file>
+        <file>modelImages/GW01.png</file>
+        <file>modelImages/back.png</file>
     </qresource>
     <qresource prefix="/qmlRC">
         <file>mainQml/CenterSwipeView.qml</file>
@@ -116,5 +118,9 @@
         <file>modelQml/base/BaseButton01.qml</file>
         <file>modelQml/base/BaseButton02.qml</file>
         <file>modelQml/base/MsgDialog01.qml</file>
+        <file>modelQml/GW01/Gw01View.qml</file>
+        <file>modelQml/GW01/ModelGw01.qml</file>
+        <file>modelQml/GW01/SimpleGw01.qml</file>
+        <file>modelQml/GW01/Node01View.qml</file>
     </qresource>
 </RCC>

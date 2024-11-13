@@ -571,6 +571,13 @@ u8 CenterMan::takeDevicePasswd(u32 dev_sn, u8 index, u8 *passwd_buff)
             memcpy(passwd_buff, passwd_ba.data(), 16);
             break;
         }
+        case MODEL_TYPE_GW01:
+        {
+            passwd_ba=ModelGw01::takeModelPassword(index);
+            encrypt_mdoe=ENCRYPT_MODE_TEA;
+            memcpy(passwd_buff, passwd_ba.data(), 16);
+            break;
+        }
     }
     return encrypt_mdoe;
 }
@@ -1004,7 +1011,7 @@ void CenterMan::parseDeciceRecv(QByteArray msg_ba)
         curr_dev_sn=pData[0]<<24|pData[1]<<16|pData[2]<<8|pData[3];
         parent_sn=0;
         pData+=4;//指向数据区
-//        qDebug("deviceRecvProcess: app_id=%u, gw_sn=%08X", app_id, curr_dev_sn);
+        qDebug("deviceRecvProcess: app_id=%u, gw_sn=%08X", app_id, curr_dev_sn);
         if(app_id==0 || curr_dev_sn==0)
         {
             qDebug("deviceRecvProcess error: app_id==0 || curr_dev_sn==0");
@@ -1373,6 +1380,12 @@ void CenterMan::initDevTypeList(void)
     tag_initNode.level=0;
     m_initTypeList.append(tag_initNode);
     
+    tag_initNode.modelName="LoRaSun网关";
+    tag_initNode.modelType="GW-WF-01";
+    tag_initNode.modelValue=MODEL_TYPE_GW01;
+    tag_initNode.level=0;
+    m_initTypeList.append(tag_initNode);
+    
 }
 
 CenterMan::InitTypeStruct *CenterMan::takeInitType(u32 dev_sn)  
@@ -1416,6 +1429,11 @@ CenterMan::WorkDevStruct * CenterMan::addWorkDevice(u32 dev_sn, u32 parent_sn, Q
             workNode.pModel = new ModelTh01(this);
             break;
         }
+        case MODEL_TYPE_GW01:
+        {
+            workNode.pModel = new ModelGw01(this);
+            break;
+        }    
       
         default:return nullptr;
     }
@@ -1549,6 +1567,7 @@ void CenterMan::showSimpleView(qint64 dev_sn, QObject *parent)
     
     if(pWorkNode && pWorkNode->pModel)
     {
+        qDebug("show simple sn=0x%08X", dev_sn);
         pWorkNode->pModel->showSimple(parent);
     }
 }
